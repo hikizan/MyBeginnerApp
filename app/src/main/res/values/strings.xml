@@ -2,4 +2,6 @@
     <string name="app_name">MyBeginnerSubmission</string>
     <string name="food_name">Nama Makanan</string>
     <string name="detail">Detail</string>
+    <string name="idr">Rp</string>
+    <string name="stock">Stok</string>
 </resources>
