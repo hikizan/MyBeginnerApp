@@ -11,6 +11,7 @@ import com.hikizan.mybeginnersubmission.model.FoodsData
 class MainActivity : AppCompatActivity() {
     private lateinit var rvFoods: RecyclerView
     private var list: ArrayList<Food> = arrayListOf()
+    private var title: String = "List Makanan"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         list.addAll(FoodsData.listData)
 
         showRecyclerList()
+        setOnActionBarTitle(title)
+    }
+
+    private fun setOnActionBarTitle(title: String) {
+        supportActionBar?.title = title
     }
 
     private fun showRecyclerList() {
