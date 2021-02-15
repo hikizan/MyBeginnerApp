@@ -18,6 +18,36 @@ object FoodsData {
         "Tekwan"
     )
 
+    private val foodsIdr = arrayOf(
+            "Rp6000",
+            "Rp7000",
+            "Rp5000",
+            "Rp6500",
+            "Rp7000",
+            "Rp4000",
+            "Rp5500",
+            "Rp5000",
+            "Rp7000",
+            "Rp6000",
+            "Rp5000",
+            "Rp5000"
+    )
+
+    private val foodstocks = intArrayOf(
+            12,
+            10,
+            10,
+            13,
+            10,
+            8,
+            11,
+            10,
+            10,
+            12,
+            10,
+            10
+    )
+
     private val foodDetails = arrayOf(
         "Burgo adalah makanan khas dari Palembang. Makanan ini dapat digolongkan sebagai makanan kecil dan bukan makanan utama. Makanan ini dapat ditemui di warung-warung khas Palembang dan biasanya disajikan bersama dengan makanan lain seperti lakso, laksan, dan celimpungan. Burgo akan terasa lebih nikmat dimakan jika dalam keadaan hangat, sehingga warung-warung biasanya menjajakan makanan ini dengan kompor untuk menghangatkannya. Bahan utama burgo adalah setengah kilogram beras, sagu, setengah kilogram ikan gabus, dan air. Selain itu, proses pembuatan burgo juga memakai bumbu-bumbu tambahan, seperti lengkuas, ketumbar, biji kemiri, kencur, temu kunci, bawang merah, bawang putih, gula pasir, daun salam, dan sedikit kapur sirih.",
         "Celimpungan berbentuk bulat dengan diameter 10 cm dan tipis (pipih) hampir seperti bakso. Kuahnya terbuat dari santan dan racikan bumbu-bumbu lainnya. Kuah Celimpungan yang terbuat dari santan memiliki warna kekuningan, namun rasanya tidak pedas.",
@@ -56,6 +86,8 @@ object FoodsData {
                 food.name = foodNames[position]
                 food.detail = foodDetails[position]
                 food.photo = foodImages[position]
+                food.idr = foodsIdr[position]
+                food.stock = foodstocks[position].toString()
                 list.add(food)
             }
             return list

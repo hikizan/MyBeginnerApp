@@ -1,7 +1,8 @@
 package com.hikizan.mybeginnersubmission
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hikizan.mybeginnersubmission.adapter.ListFoodAdapter
@@ -33,5 +34,17 @@ class MainActivity : AppCompatActivity() {
         rvFoods.layoutManager = LinearLayoutManager(this)
         val listFoodAdapter = ListFoodAdapter(list)
         rvFoods.adapter = listFoodAdapter
+
+        listFoodAdapter.setOnItemClickCallback(object : ListFoodAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: Food) {
+                showSelectedFood(data)
+            }
+        })
+    }
+
+    private fun showSelectedFood(food: Food){
+        val moveWithDataIntent = Intent(this@MainActivity, DetailActivity::class.java)
+        moveWithDataIntent.putExtra(DetailActivity.EXTRA_DATA, food)
+        startActivity(moveWithDataIntent)
     }
 }
