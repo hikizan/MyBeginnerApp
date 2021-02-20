@@ -2,6 +2,8 @@ package com.hikizan.mybeginnersubmission
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,6 +28,25 @@ class MainActivity : AppCompatActivity() {
         setOnActionBarTitle(title)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setMode(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun setMode(selectedMode: Int){
+        when(selectedMode){
+            R.id.miProfile -> {
+                val moveProfile = Intent(this@MainActivity, AboutActivity::class.java)
+                startActivity(moveProfile)
+            }
+        }
+    }
+
     private fun setOnActionBarTitle(title: String) {
         supportActionBar?.title = title
     }
@@ -35,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         val listFoodAdapter = ListFoodAdapter(list)
         rvFoods.adapter = listFoodAdapter
 
-        listFoodAdapter.setOnItemClickCallback(object : ListFoodAdapter.OnItemClickCallback{
+        listFoodAdapter.setOnItemClickCallback(object : ListFoodAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Food) {
                 showSelectedFood(data)
             }
