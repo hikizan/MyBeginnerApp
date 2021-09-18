@@ -68,4 +68,5 @@ class MainActivity : AppCompatActivity() {
         moveWithDataIntent.putExtra(DetailActivity.EXTRA_DATA, food)
         startActivity(moveWithDataIntent)
     }
+
 }

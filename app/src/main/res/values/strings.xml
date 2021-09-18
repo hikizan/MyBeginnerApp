@@ -4,4 +4,10 @@
     <string name="detail">Detail</string>
     <string name="idr">Rp</string>
     <string name="stock">Stok</string>
+    <string name="my_name">Akhmad Fauzan Prayogi</string>
+    <string name="list_makanan_favorite">List Makanan Favorite</string>
+    <string name="my_email">akhmadfauzanprayogi@gmail.com</string>
+    <string name="my_dialphone">081279762205</string>
+    <string name="my_address">Baturaja, Sumatera Selatan</string>
+    <string name="saetting">Saetting</string>
 </resources>
