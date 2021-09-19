@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun setMode(selectedMode: Int){
-        when(selectedMode){
+    private fun setMode(selectedMode: Int) {
+        when (selectedMode) {
             R.id.miProfile -> {
                 val moveProfile = Intent(this@MainActivity, AboutActivity::class.java)
                 startActivity(moveProfile)
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun showSelectedFood(food: Food){
+    private fun showSelectedFood(food: Food) {
         val moveWithDataIntent = Intent(this@MainActivity, DetailActivity::class.java)
         moveWithDataIntent.putExtra(DetailActivity.EXTRA_DATA, food)
         startActivity(moveWithDataIntent)
