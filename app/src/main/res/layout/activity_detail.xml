@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    tools:context=".DetailActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,19 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:scaleType="fitXY"
-            android:src="@android:color/darker_gray"
-            />
+            android:src="@android:color/darker_gray" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgItemPhoto"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_marginStart="16dp"
             android:layout_below="@+id/imgItemBanner"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="-60dp"
             android:src="@android:color/darker_gray"
-            app:civ_border_width="6dp"
-            app:civ_border_color="@android:color/white"/>
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="6dp" />
 
         <ImageView
             android:id="@+id/btnFavorite"
@@ -36,9 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgItemBanner"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/ic_baseline_favorite_border"/>
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_favorite_border" />
 
         <LinearLayout
             android:id="@+id/llContentDetail"
@@ -46,26 +45,26 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imgItemPhoto"
             android:layout_marginTop="8dp"
+            android:orientation="vertical"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:orientation="vertical">
+            android:paddingRight="16dp">
 
             <TextView
                 android:id="@+id/tvIdr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="@string/idr"
+                android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
+                tools:text="@string/idr" />
 
             <TextView
                 android:id="@+id/tvStock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="@string/stock"
+                android:layout_marginTop="8dp"
                 android:textSize="21sp"
-                android:layout_marginTop="8dp"/>
+                tools:text="@string/stock" />
 
         </LinearLayout>
 
@@ -81,10 +80,10 @@
                 android:id="@+id/tvItemDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="@string/detail"
-                android:textSize="16sp"
+                android:layout_margin="11dp"
                 android:lineSpacingMultiplier="1"
-                android:layout_margin="11dp"/>
+                android:textSize="16sp"
+                tools:text="@string/detail" />
 
         </androidx.cardview.widget.CardView>
 
