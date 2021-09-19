@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hikizan.mybeginnersubmission.adapter.ListFoodAdapter
 import com.hikizan.mybeginnersubmission.model.Food
 import com.hikizan.mybeginnersubmission.model.FoodsData
+import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var rvFoods: RecyclerView
@@ -54,7 +55,11 @@ class MainActivity : AppCompatActivity() {
     private fun showRecyclerList() {
         rvFoods.layoutManager = LinearLayoutManager(this)
         val listFoodAdapter = ListFoodAdapter(list)
-        rvFoods.adapter = listFoodAdapter
+
+        rvFoods.adapter = ScaleInAnimationAdapter(listFoodAdapter).apply {
+            setDuration(400)
+            setFirstOnly(false)
+        }
 
         listFoodAdapter.setOnItemClickCallback(object : ListFoodAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Food) {
